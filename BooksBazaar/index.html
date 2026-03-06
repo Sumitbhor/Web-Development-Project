@@ -35,10 +35,13 @@
                             About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i>
                             Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html"><i class="bi bi-person-circle"></i>
-                            Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cart.html"><i class="bi bi-cart"></i>
-                            Cart</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="bi bi-cart"></i>
+                            Cart
+                            <span class="badge bg-light text-dark ms-1 cart-count">0</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -57,324 +60,231 @@
             </div>
         </div>
     </header>
-    <!-- Featured Books -->
+    <!-- Books by Category (Tabs) -->
     <section class="container mt-5">
-        <h2 class="mb-4 text-center text-dark">Featured Books</h2>
-        <div class="row">
-            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="0">
-                <div class="card h-100">
-                    <img src="img/1984.webp" class="card-img-top" alt="1984 book cover">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">1984</h5>
-                        <p class="card-text">George Orwell</p>
-                        <p class="text-danger fw-bold">₹149</p>
-                        <button
-                            class="btn btn-dark w-100 add-to-cart"
-                            data-title="1984"
-                            data-author="George Orwell"
-                            data-price="149"
-                            data-image="img/1984.webp"
-                        >
-                            Add to Cart
-                        </button>
+        <h2 class="mb-4 text-center text-dark">Books by Category</h2>
+
+        <ul class="nav nav-tabs justify-content-center" id="categoryTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tab-featured" data-bs-toggle="tab" data-bs-target="#pane-featured" type="button" role="tab">
+                    Featured
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-motivational" data-bs-toggle="tab" data-bs-target="#pane-motivational" type="button" role="tab">
+                    Motivational
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-indian" data-bs-toggle="tab" data-bs-target="#pane-indian" type="button" role="tab">
+                    Indian Fiction
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-spiritual" data-bs-toggle="tab" data-bs-target="#pane-spiritual" type="button" role="tab">
+                    Spiritual
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content pt-4" id="categoryTabsContent">
+            <!-- Featured -->
+            <div class="tab-pane fade show active" id="pane-featured" role="tabpanel" aria-labelledby="tab-featured" tabindex="0">
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up">
+                        <div class="card book-card">
+                            <img src="img/1984.webp" class="card-img-top" alt="1984 book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">1984</h5>
+                                <p class="card-text">George Orwell</p>
+                                <p class="text-danger fw-bold">₹149</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="1984" data-author="George Orwell" data-price="149" data-image="img/1984.webp">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card book-card">
+                            <img src="img/ToKillaMockingBird.jpg" class="card-img-top" alt="To Kill a Mockingbird book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">To Kill a Mockingbird</h5>
+                                <p class="card-text">Harper Lee</p>
+                                <p class="text-danger fw-bold">₹199</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="To Kill a Mockingbird" data-author="Harper Lee" data-price="199" data-image="img/ToKillaMockingBird.jpg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card book-card">
+                            <img src="img/Brave_New_World.jpg" class="card-img-top" alt="Brave New World book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Brave New World</h5>
+                                <p class="card-text">Aldous Huxley</p>
+                                <p class="text-danger fw-bold">₹199</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="Brave New World" data-author="Aldous Huxley" data-price="199" data-image="img/Brave_New_World.jpg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card book-card">
+                            <img src="img/Fahrenheit_451.jpg" class="card-img-top" alt="Fahrenheit 451 book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Fahrenheit 451</h5>
+                                <p class="card-text">Ray Bradbury</p>
+                                <p class="text-danger fw-bold">₹189</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="Fahrenheit 451" data-author="Ray Bradbury" data-price="189" data-image="img/Fahrenheit_451.jpg">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100">
-                    <img src="img/ToKillaMockingbird.jpg" class="card-img-top" alt="To Kill a Mockingbird book cover">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">To Kill a Mockingbird</h5>
-                        <p class="card-text">Harper Lee</p>
-                        <p class="text-danger fw-bold">₹199</p>
-                        <button
-                            class="btn btn-dark w-100 add-to-cart"
-                            data-title="To Kill a Mockingbird"
-                            data-author="Harper Lee"
-                            data-price="199"
-                            data-image="img/ToKillaMockingbird.jpg"
-                        >
-                            Add to Cart
-                        </button>
+
+            <!-- Motivational -->
+            <div class="tab-pane fade" id="pane-motivational" role="tabpanel" aria-labelledby="tab-motivational" tabindex="0">
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up">
+                        <div class="card book-card">
+                            <img src="img/Atomic_Habits.jpg" class="card-img-top" alt="Atomic Habits book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Atomic Habits</h5>
+                                <p class="card-text">James Clear</p>
+                                <p class="text-danger fw-bold">₹299</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="Atomic Habits" data-author="James Clear" data-price="299" data-image="img/Atomic_Habits.jpg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card book-card">
+                            <img src="img/Deep_Work.jpg" class="card-img-top" alt="Deep Work book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Deep Work</h5>
+                                <p class="card-text">Cal Newport</p>
+                                <p class="text-danger fw-bold">₹349</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="Deep Work" data-author="Cal Newport" data-price="349" data-image="img/Deep_Work.jpg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card book-card">
+                            <img src="img/Think_and_Grow_Rich.jpg" class="card-img-top" alt="Think and Grow Rich book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Think and Grow Rich</h5>
+                                <p class="card-text">Napoleon Hill</p>
+                                <p class="text-danger fw-bold">₹199</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="Think and Grow Rich" data-author="Napoleon Hill" data-price="199" data-image="img/Think_and_Grow_Rich.jpg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card book-card">
+                            <img src="img/WingsOfFire.jpg" class="card-img-top" alt="Wings of Fire book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Wings of Fire</h5>
+                                <p class="card-text">A. P. J. Abdul Kalam</p>
+                                <p class="text-danger fw-bold">₹299</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="Wings of Fire" data-author="A. P. J. Abdul Kalam" data-price="299" data-image="img/WingsOfFire.jpg">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100">
-                    <img src="img/TheGreatGatsby.jpg" class="card-img-top" alt="The Great Gatsby book cover">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">The Great Gatsby</h5>
-                        <p class="card-text">F. Scott Fitzgerald</p>
-                        <p class="text-danger fw-bold">₹179</p>
-                        <button
-                            class="btn btn-dark w-100 add-to-cart"
-                            data-title="The Great Gatsby"
-                            data-author="F. Scott Fitzgerald"
-                            data-price="179"
-                            data-image="img/TheGreatGatsby.jpg"
-                        >
-                            Add to Cart
-                        </button>
+
+            <!-- Indian Fiction -->
+            <div class="tab-pane fade" id="pane-indian" role="tabpanel" aria-labelledby="tab-indian" tabindex="0">
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up">
+                        <div class="card book-card">
+                            <img src="img/TheWhiteTiger.jpg" class="card-img-top" alt="The White Tiger book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">The White Tiger</h5>
+                                <p class="card-text">Aravind Adiga</p>
+                                <p class="text-danger fw-bold">₹199</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="The White Tiger" data-author="Aravind Adiga" data-price="199" data-image="img/TheWhiteTiger.jpg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card book-card">
+                            <img src="img/TheGodOfSmallThings.jpg" class="card-img-top" alt="The God of Small Things book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">The God of Small Things</h5>
+                                <p class="card-text">Arundhati Roy</p>
+                                <p class="text-danger fw-bold">₹249</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="The God of Small Things" data-author="Arundhati Roy" data-price="249" data-image="img/TheGodOfSmallThings.jpg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card book-card">
+                            <img src="img/Midnight'sChildren.jpg" class="card-img-top" alt="Midnight's Children book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Midnight's Children</h5>
+                                <p class="card-text">Salman Rushdie</p>
+                                <p class="text-danger fw-bold">₹299</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="Midnight's Children" data-author="Salman Rushdie" data-price="299" data-image="img/Midnight'sChildren.jpg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card book-card">
+                            <img src="img/TrainToPakistan.jpg" class="card-img-top" alt="Train to Pakistan book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Train to Pakistan</h5>
+                                <p class="card-text">Khushwant Singh</p>
+                                <p class="text-danger fw-bold">₹199</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="Train to Pakistan" data-author="Khushwant Singh" data-price="199" data-image="img/TrainToPakistan.jpg">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card h-100">
-                    <img src="img/TheCatcherInTheRye.jpg" class="card-img-top" alt="The Catcher in the Rye book cover">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">The Catcher in the Rye</h5>
-                        <p class="card-text">J. D. Salinger</p>
-                        <p class="text-danger fw-bold">₹159</p>
-                        <button
-                            class="btn btn-dark w-100 add-to-cart"
-                            data-title="The Catcher in the Rye"
-                            data-author="J. D. Salinger"
-                            data-price="159"
-                            data-image="img/TheCatcherInTheRye.jpg"
-                        >
-                            Add to Cart
-                        </button>
+
+            <!-- Spiritual -->
+            <div class="tab-pane fade" id="pane-spiritual" role="tabpanel" aria-labelledby="tab-spiritual" tabindex="0">
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up">
+                        <div class="card book-card">
+                            <img src="img/Bhagvadgita.jpg" class="card-img-top" alt="The Bhagavad Gita book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">The Bhagavad Gita</h5>
+                                <p class="card-text">A. C. Bhaktivedanta Swami</p>
+                                <p class="text-danger fw-bold">₹149</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="The Bhagavad Gita" data-author="A. C. Bhaktivedanta Swami" data-price="149" data-image="img/Bhagvadgita.jpg">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Motivational -->
-    <section class="container mt-5">
-        <h2 class=" text-center mb-4 text-dark">Motivational Books</h2>
-
-        <div class="row">
-            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="0">
-                <div class="card h-100">
-                    <img src="img/WingsOfFire.jpg" class="card-img-top" alt="Wings of Fire book cover">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Wings of Fire</h5>
-                        <p class="card-text">A. P. J. Abdul Kalam</p>
-                        <p class="text-danger fw-bold">₹299</p>
-                        <button
-                            class="btn btn-dark w-100 add-to-cart"
-                            data-title="Wings of Fire"
-                            data-author="A. P. J. Abdul Kalam"
-                            data-price="299"
-                            data-image="img/WingsOfFire.jpg"
-                        >
-                            Add to Cart
-                        </button>
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card book-card">
+                            <img src="img/The_Power_of_Now.jpg" class="card-img-top" alt="The Power of Now book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">The Power of Now</h5>
+                                <p class="card-text">Eckhart Tolle</p>
+                                <p class="text-danger fw-bold">₹299</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="The Power of Now" data-author="Eckhart Tolle" data-price="299" data-image="img/The_Power_of_Now.jpg">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100">
-                    <img src="img/AnEraOfDarkness.jpg" class="card-img-top" alt="An Era of Darkness book cover">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">An Era of Darkness</h5>
-                        <p class="card-text">Shashi Tharoor</p>
-                        <p class="text-danger fw-bold">₹299</p>
-                        <button
-                            class="btn btn-dark w-100 add-to-cart"
-                            data-title="An Era of Darkness"
-                            data-author="Shashi Tharoor"
-                            data-price="299"
-                            data-image="img/AnEraOfDarkness.jpg"
-                        >
-                            Add to Cart
-                        </button>
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card book-card">
+                            <img src="img/Yogi.jpg" class="card-img-top" alt="Autobiography of a Yogi book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Autobiography of a Yogi</h5>
+                                <p class="card-text">Paramahansa Yogananda</p>
+                                <p class="text-danger fw-bold">₹199</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="Autobiography of a Yogi" data-author="Paramahansa Yogananda" data-price="199" data-image="img/Yogi.jpg">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
-                <div class="card h-100">
-                    <img src="img/IgnitedMinds.jpg" class="card-img-top" alt="Ignited Minds book cover">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Ignited Minds</h5>
-                        <p class="card-text">A. P. J. Abdul Kalam</p>
-                        <p class="text-danger fw-bold">₹349</p>
-                        <button
-                            class="btn btn-dark w-100 add-to-cart"
-                            data-title="Ignited Minds"
-                            data-author="A. P. J. Abdul Kalam"
-                            data-price="349"
-                            data-image="img/IgnitedMinds.jpg"
-                        >
-                            Add to Cart
-                        </button>
+                    <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card book-card">
+                            <img src="img/Ikigai.jpg" class="card-img-top" alt="Ikigai book cover">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Ikigai</h5>
+                                <p class="card-text">Héctor García</p>
+                                <p class="text-danger fw-bold">₹249</p>
+                                <button class="btn btn-dark w-100 add-to-cart" data-title="Ikigai" data-author="Héctor García" data-price="249" data-image="img/Ikigai.jpg">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="600">
-                <div class="card h-100">
-                    <img src="img/ExamWarriors.jpg" class="card-img-top" alt="Exam Warriors book cover">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Exam Warriors</h5>
-                        <p class="card-text">Narendra Modi</p>
-                        <p class="text-danger fw-bold">₹499</p>
-                        <button
-                            class="btn btn-dark w-100 add-to-cart"
-                            data-title="Exam Warriors"
-                            data-author="Narendra Modi"
-                            data-price="499"
-                            data-image="img/ExamWarriors.jpg"
-                        >
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>  
-    </section>
-    <section class="container mt-5">
-        <h2 class="mb-4">Indian Fiction</h2>
-
-        <div class="book-row">
-            <div class="card">
-                <img src="img/TheWhiteTiger.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="The White Tiger book cover">
-                <div class="card-body text-center">
-                    <h5 class="card-title">The White Tiger</h5>
-                    <p class="card-text">Aravind Adiga</p>
-                    <p class="text-danger fw-bold">₹199</p>
-                    <button
-                        class="btn btn-dark w-100 add-to-cart"
-                        data-title="The White Tiger"
-                        data-author="Aravind Adiga"
-                        data-price="199"
-                        data-image="img/TheWhiteTiger.jpg"
-                    >
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/TheGodOfSmallThings.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="The God of Small Things book cover">
-                <div class="card-body text-center">
-                    <h5 class="card-title">The God of Small Things</h5>
-                    <p class="card-text">Arundhati Roy</p>
-                    <p class="text-danger fw-bold">₹249</p>
-                    <button
-                        class="btn btn-dark w-100 add-to-cart"
-                        data-title="The God of Small Things"
-                        data-author="Arundhati Roy"
-                        data-price="249"
-                        data-image="img/TheGodOfSmallThings.jpg"
-                    >
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/Midnight'sChildren.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="Midnight's Children book cover">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Midnight's Children</h5>
-                    <p class="card-text">Salman Rushdie</p>
-                    <p class="text-danger fw-bold">₹299</p>
-                    <button
-                        class="btn btn-dark w-100 add-to-cart"
-                        data-title="Midnight's Children"
-                        data-author="Salman Rushdie"
-                        data-price="299"
-                        data-image="img/Midnight'sChildren.jpg"
-                    >
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/TrainToPakistan.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="Train to Pakistan book cover">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Train to Pakistan</h5>
-                    <p class="card-text">Khushwant Singh</p>
-                    <p class="text-danger fw-bold">₹199</p>
-                    <button
-                        class="btn btn-dark w-100 add-to-cart"
-                        data-title="Train to Pakistan"
-                        data-author="Khushwant Singh"
-                        data-price="199"
-                        data-image="img/TrainToPakistan.jpg"
-                    >
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Spiritual Books -->
-    <section class="container mt-5 mb-5">
-        <h2 class="mb-4">Spiritual Books</h2>
-
-        <div class="book-row">
-            <div class="card">
-                <img src="img/Bhagvadgita.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="The Bhagavad Gita book cover">
-                <div class="card-body text-center">
-                    <h5 class="card-title">The Bhagavad Gita</h5>
-                    <p class="card-text">A. C. Bhaktivedanta Swami</p>
-                    <p class="text-danger fw-bold">₹149</p>
-                    <button
-                        class="btn btn-dark w-100 add-to-cart"
-                        data-title="The Bhagavad Gita"
-                        data-author="A. C. Bhaktivedanta Swami"
-                        data-price="149"
-                        data-image="img/Bhagvadgita.jpg"
-                    >
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/Yogi.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="Autobiography of a Yogi book cover">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Autobiography of a Yogi</h5>
-                    <p class="card-text">Paramahansa Yogananda</p>
-                    <p class="text-danger fw-bold">₹199</p>
-                    <button
-                        class="btn btn-dark w-100 add-to-cart"
-                        data-title="Autobiography of a Yogi"
-                        data-author="Paramahansa Yogananda"
-                        data-price="199"
-                        data-image="img/Yogi.jpg"
-                    >
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/TheJourneyHome.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="The Secret Journey book cover">
-                <div class="card-body text-center">
-                    <h5 class="card-title">The Secret Journey</h5>
-                    <p class="card-text">Radhanath Swami</p>
-                    <p class="text-danger fw-bold">₹249</p>
-                    <button
-                        class="btn btn-dark w-100 add-to-cart"
-                        data-title="The Secret Journey"
-                        data-author="Radhanath Swami"
-                        data-price="249"
-                        data-image="img/TheJourneyHome.jpg"
-                    >
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/Mrityunjay.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="Mrityunjaya book cover">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Mrityunjaya</h5>
-                    <p class="card-text">Shivaji Sawant</p>
-                    <p class="text-danger fw-bold">₹199</p>
-                    <button
-                        class="btn btn-dark w-100 add-to-cart"
-                        data-title="Mrityunjaya"
-                        data-author="Shivaji Sawant"
-                        data-price="199"
-                        data-image="img/Mrityunjay.jpg"
-                    >
-                        Add to Cart
-                    </button>
                 </div>
             </div>
         </div>

@@ -14,10 +14,32 @@
             border-radius: 10px;
         }
 
-       /* .card-img-top {
-            height: 200px;
-            object-fit:scale-down;
-        } */
+        /* Uniform book card sizing */
+        .book-card {
+            height: 100%;
+        }
+
+        .book-card .card-img-top {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .book-card .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 8px;
+            min-height: 190px;
+        }
+
+        .book-card .card-title {
+            min-height: 48px;
+        }
+
+        .book-card .btn {
+            margin-top: auto;
+        }
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
